@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="lf.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="inner-box" id="card">
+                    <div class="card-front">
+                       <h2>Login</h2>
+                       <form>
+                           <input type="email" placeholder="User id" required class="ip-box"/>
+                           <input type="password" placeholder="Password" required class="ip-box"/>
+                           <input type="submit" value="Login" class="btn"/>
+
+                        </form>
+                        <button class="btn" onclick="openRegister()">I am NEW</button>
+                    </div>
+                    <div class="card-back">
+                        <h2>Register</h2>
+                       <form>
+                        <input type="text" placeholder="Name" required class="ip-box"/>
+                        <input type="text" placeholder="Phno" required class="ip-box"/>
+                           <input type="email" placeholder="email" required class="ip-box"/>
+                           <input type="password" placeholder="Password" required class="ip-box"/>
+                           <input type="submit" value="Register" class="btn"/>
+
+                        </form>
+                        <button class="btn" onclick="openLogin()">I have account</button>
+
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <script>
+            var card=document.getElementById("card");
+            function openRegister()
+            {
+                card.style.transform="rotateY(-180deg)";
+            }
+            function openLogin()
+            {
+                card.style.transform="rotateY(0deg)";
+            }
+        </script>
+
+    </body>
+</html>

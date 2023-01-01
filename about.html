@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Vector</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body onload="slider()">
+    <div class="container">
+        <div class="slider">
+            <img src="images/h1.jpg" id="sl1"/>
+        </div>
+        <div class="layer">
+
+        </div>
+    </div>
+    <script>
+        var sl=document.getElementById("sl1");
+        var imgs=new Array(
+            "images/h1.jpg",
+            "images/h3.webp",
+            "images/h4.jpg",
+            "images/h5.webp"
+        );
+
+    var le=imgs.length;
+    var i=0
+    function slider(){
+        if(i>le-1)
+        {
+            i=0;
+        }
+        sl.src=imgs[i];
+        i++;
+        setTimeout('slider()',3000);
+    }
+    </script>
+</body>
+</html>
